@@ -3,10 +3,11 @@ package edu.eci.pdsw.sampleprj.dao.mybatis;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import edu.eci.pdsw.sampleprj.dao.ItemDAO;
-import edu.eci.pdsw.sampleprj.dao.PersistenceException;
 import edu.eci.pdsw.samples.entities.Item;
 import edu.eci.pdsw.sampleprj.dao.mybatis.mappers.ItemMapper;
 import java.sql.SQLException;
+
+import org.apache.ibatis.exceptions.PersistenceException;
 
 public class MyBATISItemDAO implements ItemDAO{
 
@@ -27,7 +28,7 @@ public class MyBATISItemDAO implements ItemDAO{
   @Override
   public Item load(int id) throws PersistenceException {
   try{
-      return itemMapper.consultarItem(id);
+      return null; //itemMapper.consultarItem(id);
   }
   catch(org.apache.ibatis.exceptions.PersistenceException e){
       throw new PersistenceException("Error al consultar el item "+id,e);

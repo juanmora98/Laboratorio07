@@ -6,20 +6,25 @@
 package edu.eci.pdsw.sampleprj.dao.mybatis;
 
 
-import com.google.inject.Inject;
-import com.google.inject.Singleton;
-import edu.eci.pdsw.sampleprj.dao.PersistenceException;
-import edu.eci.pdsw.sampleprj.dao.mybatis.mappers.ClienteMapper;
+
 import java.sql.SQLException;
+import org.apache.ibatis.exceptions.PersistenceException;
+
+import com.google.inject.Inject;
+
 import edu.eci.pdsw.sampleprj.dao.ClienteDAO;
+import edu.eci.pdsw.sampleprj.dao.mybatis.mappers.ClienteMapper;
 import edu.eci.pdsw.samples.entities.Cliente;
+
+
+
 
 /**
  *
  * @author 2124203
  */
 public class MyBATISClienteDAO implements ClienteDAO{
-   @Inject
+    @Inject
     private ClienteMapper clienteMapper;    
 
   @Override

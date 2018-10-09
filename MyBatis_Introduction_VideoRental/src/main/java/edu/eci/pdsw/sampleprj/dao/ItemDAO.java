@@ -1,5 +1,7 @@
 package edu.eci.pdsw.sampleprj.dao;
 
+import org.apache.ibatis.exceptions.PersistenceException;
+
 import edu.eci.pdsw.samples.entities.Item;
 
 public interface ItemDAO {

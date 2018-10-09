@@ -85,7 +85,7 @@ public class MyBatisExample {
         
         System.out.println("Agregado nuevo item");
         ItemMapper im=sqlss.getMapper(ItemMapper.class);
-        im.insertarItem(new Item(new TipoItem(1, "Video"), 2137560, "Cienpies humano 2", "Personas encoladas", new Date(0001,01,01), 5000, "DVD", "Familiar"));
+        //im.insertarItem(new Item(new TipoItem(1, "Video"), 2137560, "Cienpies humano 2", "Personas encoladas", new Date(0001,01,01), 5000, "DVD", "Familiar"));
         sqlss.commit();
         
         

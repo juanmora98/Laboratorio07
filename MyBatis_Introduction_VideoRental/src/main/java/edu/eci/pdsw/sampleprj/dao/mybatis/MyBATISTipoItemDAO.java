@@ -7,16 +7,18 @@ package edu.eci.pdsw.sampleprj.dao.mybatis;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import edu.eci.pdsw.sampleprj.dao.ItemRentadoDAO;
+
+import edu.eci.pdsw.sampleprj.dao.TipoItemDAO;
 import edu.eci.pdsw.sampleprj.dao.mybatis.mappers.TipoItemMapper;
-import edu.eci.pdsw.sampleprj.dao.PersistenceException;
 import edu.eci.pdsw.samples.entities.TipoItem;
 import java.sql.SQLException;
+
+import org.apache.ibatis.exceptions.PersistenceException;
 /**
  *
  * @author 2124203
  */
-public class MyBATISTipoItemDAO {
+public class MyBATISTipoItemDAO implements TipoItemDAO {
       @Inject
   private TipoItemMapper tipoItemMapper;    
 
@@ -34,7 +36,7 @@ public class MyBATISTipoItemDAO {
   @Override
   public TipoItem load(int id) throws PersistenceException {
   try{
-      return TipoItemMapper.consultarTipoItem(id);
+      return tipoItemMapper.consultarTipoItem(id);
   }
   catch(org.apache.ibatis.exceptions.PersistenceException e){
       throw new PersistenceException("Error al consultar el item "+id,e);

@@ -8,10 +8,10 @@ package edu.eci.pdsw.sampleprj.dao.mybatis;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import edu.eci.pdsw.sampleprj.dao.ItemRentadoDAO;
-import edu.eci.pdsw.sampleprj.dao.mybatis.mappers.ItemRentadoMapper;
-import edu.eci.pdsw.sampleprj.dao.PersistenceException;
+import edu.eci.pdsw.sampleprj.dao.mybatis.mappers.ItemMapper;
 import edu.eci.pdsw.samples.entities.ItemRentado;
 import java.sql.SQLException;
+import org.apache.ibatis.exceptions.PersistenceException;
 
 /**
  *
@@ -20,7 +20,7 @@ import java.sql.SQLException;
 public class MyBATISItemRentadoDAO implements ItemRentadoDAO{
     
   @Inject
-  private ItemRentadoMapper itemRentadoMapper;    
+  private ItemMapper itemRentadoMapper;    
 
   @Override
   public void save(ItemRentado it) throws PersistenceException{
