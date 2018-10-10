@@ -57,20 +57,12 @@
 		<result property='nombre' column='cNombre'/>
 		<result property='telefono' column='cTelefono'/> 
 		<result property='email' column='cEmail'/>
-                <result property='direccion' column='cDireccion'/>
+        <result property='direccion' column='cDireccion'/>
 		<result property='vetado' column='cVetado'/>      
-		<collection property='rentados' ofType='ItemRentado' resultMap='ItemRentadoResult'></collection>
+		<collection property='rentados' ofType='ItemRentado' resultMap='edu.eci.pdsw.sampleprj.dao.mybatis.mappers.ItemRentadoMapper.ItemRentadoResult'></collection>
 	</resultMap>
-        <resultMap type='ItemRentado' id='ItemRentadoResult'>
-		<id property='id' column='irId'/>
-		<result property='fechainiciorenta' column='irFechaInicioRenta'/>
-		<result property='fechafinrenta' column='irFechaFinRenta'/>
-                <association property="item" javaType="Item"></association>
-	</resultMap>
+    
         
-        <resultMap type='TipoItem' id='TipoItemResult'>
-		<id property='id' column='tiId'/>
-		<result property='descripcion' column='tiDescripcion'/>
-	</resultMap>
-          	
+    
+       	
 </mapper>

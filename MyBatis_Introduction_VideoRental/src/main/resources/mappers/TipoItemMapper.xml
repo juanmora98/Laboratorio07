@@ -16,6 +16,5 @@
 		<id property='id' column='tiId'/>
 		<result property='descripcion' column='tiDescripcion'/>
 	</resultMap>
-
                 
 </mapper>

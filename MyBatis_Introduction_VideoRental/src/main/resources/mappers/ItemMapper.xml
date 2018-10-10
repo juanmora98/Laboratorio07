@@ -6,14 +6,14 @@
 <mapper namespace="edu.eci.pdsw.sampleprj.dao.mybatis.mappers.ItemMapper">
 	<select parameterType="map" id="consultarItems" resultMap="ItemResult">
 			select
-			i.id ,
-			i.nombre ,
-			i.descripcion ,
-			i.fechalanzamiento ,
-			i.tarifaxdia ,
-			i.formatorenta ,
-			i.genero ,
-			i.tipoitem_id
+			i.id as iId,
+			i.nombre as iNombre,
+			i.descripcion as iDescripcion,
+			i.fechalanzamiento as iFechaLanzamiento,
+			i.tarifaxdia as iTarifaxDia,
+			i.formatorenta as iFormatoRenta,
+			i.genero iGenero,
+			i.tipoitem_id 
 
 		
 			FROM VI_ITEMS as i;
@@ -33,8 +33,8 @@
             <result property='tarifaxDia' column='iTarifaxDia'/>
             <result property='formatoRenta' column='iFormatoRenta'/>
             <result property='genero' column='iGenero'/>
-            <association property="tipo" javaType="TipoItem"></association>
-        </resultMap>
+            <association property="tipo" javaType="TipoItem" resultMap='edu.eci.pdsw.sampleprj.dao.mybatis.mappers.TipoItemMapper.TipoItemResult'></association>
+    </resultMap>  
     
     
 </mapper>

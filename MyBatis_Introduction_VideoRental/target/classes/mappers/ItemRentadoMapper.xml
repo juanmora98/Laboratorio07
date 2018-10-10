@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="edu.eci.pdsw.sampleprj.dao.mybatis.mappers.TipoItemMapper">
+<mapper namespace="edu.eci.pdsw.sampleprj.dao.mybatis.mappers.ItemRentadoMapper">
 	<select parameterType="map" id="consultarItemsRentados" resultMap="ItemRentadoResult">
 				select
 				ir.id ,
@@ -19,7 +19,7 @@
 		<id property='id' column='irId'/>
 		<result property='fechainiciorenta' column='irFechaInicioRenta'/>
 		<result property='fechafinrenta' column='irFechaFinRenta'/>
-                <association property="item" javaType="Item"></association>
+        <association property="item" javaType="Item" resultMap='edu.eci.pdsw.sampleprj.dao.mybatis.mappers.ItemMapper.ItemResult'></association>
 	</resultMap>
 
                 
