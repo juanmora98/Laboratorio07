@@ -12,17 +12,34 @@
 			i.fechalanzamiento as iFechaLanzamiento,
 			i.tarifaxdia as iTarifaxDia,
 			i.formatorenta as iFormatoRenta,
-			i.genero iGenero,
-			i.tipoitem_id 
+			i.genero as iGenero,
+			i.tipoitem_id as tiId,
+			ti.descripcion as tiDescripcion
 
 		
-			FROM VI_ITEMS as i;
+			FROM VI_ITEMS as i JOIN VI_TIPOITEM as ti on (i.tipoitem_id = ti.id);
 	</select>
-        
-        <insert id="insertarItem" parameterType="map">
+    
+    
+    <select parameterType="map" id="consultarItem" resultMap="ItemResult">
+    	select
+			i.id as iId,
+			i.nombre as iNombre,
+			i.descripcion as iDescripcion,
+			i.fechalanzamiento as iFechaLanzamiento,
+			i.tarifaxdia as iTarifaxDia,
+			i.formatorenta as iFormatoRenta,
+			i.genero as iGenero,
+			i.tipoitem_id as tiId,
+			ti.descripcion as tiDescripcion
+
+		
+			FROM VI_ITEMS as i JOIN VI_TIPOITEM as ti on (i.tipoitem_id = ti.id and i.id=#{idItem});
+    </select>
+    <insert id="insertarItem" parameterType="map">
             insert into VI_ITEMS (nombre, id, descripcion, fechalanzamiento, tarifaxdia, formatorenta, genero, TIPOITEM_id)
             values (#{item.nombre},#{item.id},#{item.descripcion},#{item.fechaLanzamiento},#{item.tarifaxDia},#{item.formatoRenta},#{item.genero},#{item.tipo.id})
-        </insert>
+    </insert>
         
 
         <resultMap type='Item' id='ItemResult'>
