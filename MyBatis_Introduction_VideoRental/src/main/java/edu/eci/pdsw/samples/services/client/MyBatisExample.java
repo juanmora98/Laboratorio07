@@ -90,7 +90,7 @@ public class MyBatisExample {
         	System.out.println(i.toString());
         }*/
         System.out.println(im.consultarItem(2137560).toString());
-        sqlss.commit();
+        sqlss.commit();   
         
         
         sqlss.close();
