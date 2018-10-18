@@ -8,6 +8,8 @@ package edu.eci.pdsw.sampleprj.dao.mybatis;
 
 
 import java.sql.SQLException;
+import java.util.List;
+
 import org.apache.ibatis.exceptions.PersistenceException;
 
 import com.google.inject.Inject;
@@ -39,16 +41,25 @@ public class MyBATISClienteDAO implements ClienteDAO{
   }
 
   @Override
-  public Cliente load(int documento) throws PersistenceException {
-  try{
-      return clienteMapper.consultarCliente(documento);
-  }
-  catch(org.apache.ibatis.exceptions.PersistenceException e){
-      throw new PersistenceException("Error al consultar el item "+documento,e);
-  }
+  public Cliente load(long documento) throws PersistenceException {
+	  try{
+		  return clienteMapper.consultarCliente(documento);
+  		}
+	  catch(org.apache.ibatis.exceptions.PersistenceException e){
+		  throw new PersistenceException("Error al consultar el item "+documento,e);
+  		}	
 
 
   }
+  
+  @Override
+  public List<Cliente> loadAll() throws PersistenceException{
+	  try {
+		  return clienteMapper.consultarClientes();
+	  }catch(org.apache.ibatis.exceptions.PersistenceException e){
+		  throw new PersistenceException("Error al consultar los clientes");
+  	  }	
 
   }
+}
 

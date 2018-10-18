@@ -23,6 +23,8 @@ public interface ItemMapper {
 
 	public void insertarItem(ItemRentado it);
 
+	public ItemRentado consultarItemRentado(int id);
+
     
         
 }
