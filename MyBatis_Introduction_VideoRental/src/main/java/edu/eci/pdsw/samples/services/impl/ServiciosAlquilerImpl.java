@@ -75,17 +75,20 @@ public class ServiciosAlquilerImpl implements ServiciosAlquiler {
 
    @Override
    public TipoItem consultarTipoItem(int id) throws ExcepcionServiciosAlquiler {
-       throw new UnsupportedOperationException("Not supported yet.");
+       TipoItem tipoItem = tipoitemDAO.load(id);
+       return tipoItem;
    }
 
    @Override
    public List<TipoItem> consultarTiposItem() throws ExcepcionServiciosAlquiler {
-       throw new UnsupportedOperationException("Not supported yet.");
+       List<TipoItem> tiposItem = tipoitemDAO.loadAll();
+       return tiposItem;
    }
 
    @Override
    public void registrarAlquilerCliente(Date date, long docu, Item item, int numdias) throws ExcepcionServiciosAlquiler {
-       throw new UnsupportedOperationException("Not supported yet.");
+       Date fechaFinalRenta = new Date(date.getTime()+(numdias*86400000));
+       clienteDAO.agregarItemRentadoACliente(docu, item.getId(), date, fechaFinalRenta);
    }
 
    @Override

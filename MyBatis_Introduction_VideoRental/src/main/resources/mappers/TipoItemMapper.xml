@@ -12,6 +12,12 @@
 			
 				FROM VI_TIPOITEM as it;
 	</select>
+	<select parameterType="map" id="consultarTipoItem" resultMap="TipoItemResult">
+		select
+		ti.id,
+		ti.descripcion
+		FROM VI_TIPOITEM as it WHERE ti.id=#{tiid};
+	</select>
     <resultMap type='TipoItem' id='TipoItemResult'>
 		<id property='id' column='tiId'/>
 		<result property='descripcion' column='tiDescripcion'/>

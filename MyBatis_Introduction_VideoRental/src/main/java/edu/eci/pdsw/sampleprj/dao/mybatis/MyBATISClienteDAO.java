@@ -7,6 +7,7 @@ package edu.eci.pdsw.sampleprj.dao.mybatis;
 
 
 
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -60,6 +61,16 @@ public class MyBATISClienteDAO implements ClienteDAO{
 		  throw new PersistenceException("Error al consultar los clientes");
   	  }	
 
+  }
+  
+  @Override
+  public void agregarItemRentadoACliente(long cliente_id, int item_id, Date fechaInicio, Date fechaFin) throws PersistenceException{
+	try {
+		clienteMapper.agregarItemRentadoACliente(cliente_id, item_id, fechaInicio, fechaFin);
+	}catch(org.apache.ibatis.exceptions.PersistenceException e){
+		  throw new PersistenceException("Error al añadir alquiler"+cliente_id+" "+item_id);
+	  }	
+	  
   }
 }
 

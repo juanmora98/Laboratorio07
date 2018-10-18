@@ -5,6 +5,7 @@
  */
 package edu.eci.pdsw.sampleprj.dao;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.apache.ibatis.exceptions.PersistenceException;
@@ -19,5 +20,6 @@ public interface ClienteDAO {
     public void save(Cliente it) throws PersistenceException;
     public Cliente load(long docu) throws PersistenceException;
     public List<Cliente> loadAll() throws PersistenceException;
+    public void agregarItemRentadoACliente(long cliente_id, int item_id, Date fechaInicio, Date fechaFIn) throws PersistenceException;
 
 }
