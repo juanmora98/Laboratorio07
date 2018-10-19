@@ -22,8 +22,11 @@ public class ServiciosAlquilerImpl implements ServiciosAlquiler {
 
    @Inject
    private ItemDAO itemDAO;
+   @Inject
    private ClienteDAO clienteDAO;
+   @Inject
    private ItemRentadoDAO itemrentadoDAO;
+   @Inject
    private TipoItemDAO tipoitemDAO;
 
    @Override
@@ -35,20 +38,35 @@ public class ServiciosAlquilerImpl implements ServiciosAlquiler {
 
    @Override
    public Cliente consultarCliente(long docu) throws ExcepcionServiciosAlquiler {
-       Cliente cliente = clienteDAO.load(docu);
-       return cliente;
+	   try {
+		   Cliente cliente = clienteDAO.load(docu);
+		   return cliente;
+       }
+	   catch(PersistenceException ex) {
+		   throw new ExcepcionServiciosAlquiler("Error al consultar al cliente "+docu,ex); 
+	   }
    }
 
    @Override
    public List<ItemRentado> consultarItemsCliente(long idcliente) throws ExcepcionServiciosAlquiler {
-       Cliente cliente = clienteDAO.load(idcliente);
-       return cliente.getRentados();
+       try{
+    	   Cliente cliente = clienteDAO.load(idcliente);
+    	   return cliente.getRentados();
+       }
+       catch(PersistenceException ex) {
+		   throw new ExcepcionServiciosAlquiler("Error los items rentados del cliente "+idcliente,ex); 
+	   }
    }
 
    @Override
    public List<Cliente> consultarClientes() throws ExcepcionServiciosAlquiler {
-       List<Cliente> clientes = clienteDAO.loadAll();
-       return clientes;
+	   try {
+		   List<Cliente> clientes = clienteDAO.loadAll();
+		   return clientes;
+       }
+	   catch(PersistenceException ex) {
+		   throw new ExcepcionServiciosAlquiler("Error al consultar a los clientes",ex); 
+	   }
    }
 
    @Override
@@ -62,33 +80,58 @@ public class ServiciosAlquilerImpl implements ServiciosAlquiler {
 
    @Override
    public List<Item> consultarItemsDisponibles() {
-       List<Item> items = itemDAO.loadAll();
-       return items;
+	   List<Item> items = itemDAO.loadAll();
+	   return items;
    }
 
    @Override
+   /** Usado para calcular el valor de una multa por alquiler.
+    * 
+    * 
+    */
    public long consultarMultaAlquiler(int iditem, Date fechaDevolucion) throws ExcepcionServiciosAlquiler {
-       Item item = itemDAO.load(iditem);
-       long valorXDia = item.getTarifaxDia();
-       return (Long) null;
+	   try{
+		   ItemRentado itemRentado = itemrentadoDAO.load(iditem);
+		   Item item = itemRentado.getItem();
+		   Date fechaFinalRenta= itemRentado.getFechafinrenta();
+		   long valorXDia = item.getTarifaxDia();
+		   long multa = valorXDia * (fechaDevolucion.getTime()/86400000 - fechaFinalRenta.getTime()/86400000);
+		   return multa;
+	   }catch (PersistenceException ex) {
+           throw new ExcepcionServiciosAlquiler("Error al verificar el valor de la multa "+iditem+" con fecha "+fechaDevolucion,ex);
+       }
    }
 
    @Override
    public TipoItem consultarTipoItem(int id) throws ExcepcionServiciosAlquiler {
-       TipoItem tipoItem = tipoitemDAO.load(id);
-       return tipoItem;
+	   try {
+		   TipoItem tipoItem = tipoitemDAO.load(id);
+		   return tipoItem;
+	   }catch (PersistenceException ex) {
+           throw new ExcepcionServiciosAlquiler("Error al consultar el tipo de item "+id,ex);
+       }
    }
 
    @Override
    public List<TipoItem> consultarTiposItem() throws ExcepcionServiciosAlquiler {
-       List<TipoItem> tiposItem = tipoitemDAO.loadAll();
-       return tiposItem;
+	   try {
+		   List<TipoItem> tiposItem = tipoitemDAO.loadAll();
+		   return tiposItem;
+	   }
+	   catch (PersistenceException ex) {
+           throw new ExcepcionServiciosAlquiler("Error al consultar los tipos de items",ex);
+       }
    }
 
    @Override
    public void registrarAlquilerCliente(Date date, long docu, Item item, int numdias) throws ExcepcionServiciosAlquiler {
-       Date fechaFinalRenta = new Date(date.getTime()+(numdias*86400000));
-       clienteDAO.agregarItemRentadoACliente(docu, item.getId(), date, fechaFinalRenta);
+	   try {
+		   Date fechaFinalRenta = new Date(date.getTime()+(numdias*86400000));
+		   clienteDAO.agregarItemRentadoACliente(docu, item.getId(), date, fechaFinalRenta);
+	   }
+	   catch (PersistenceException ex) {
+           throw new ExcepcionServiciosAlquiler("Error al registrar un item rentado al cliente "+docu,ex);
+       }
    }
 
    @Override

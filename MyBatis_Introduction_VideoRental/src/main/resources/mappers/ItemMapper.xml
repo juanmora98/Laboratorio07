@@ -40,7 +40,26 @@
             insert into VI_ITEMS (nombre, id, descripcion, fechalanzamiento, tarifaxdia, formatorenta, genero, TIPOITEM_id)
             values (#{item.nombre},#{item.id},#{item.descripcion},#{item.fechaLanzamiento},#{item.tarifaxDia},#{item.formatoRenta},#{item.genero},#{item.tipo.id})
     </insert>
-        
+    
+    <select parameterType="map" id="consultarItemRentado" resultMap="edu.eci.pdsw.sampleprj.dao.mybatis.mappers.ItemRentadoMapper.ItemRentadoResult">
+				SELECT
+				ir.id as irId,
+				ir.fechainiciorenta as irFechaInicioRenta ,
+				ir.fechafinrenta as irFechaFinRenta,
+				i.id as iId,
+				i.nombre as iNombre,
+				i.descripcion as iDescripcion,
+				i.fechalanzamiento as iFechaLanzamiento,
+				i.tarifaxdia as iTarifaxDia,
+				i.formatorenta as iFormatoRenta,
+				i.genero as iGenero,
+				i.tipoitem_id as tiId,
+				ti.descripcion as tiDescripcion
+
+			
+				FROM VI_ITEMRENTADO as ir JOIN VI_ITEMS as i ON (ir.items_id = i.id) JOIN VI_TIPOITEM as ti ON (i.tipoitem_id = ti.id)
+				WHERE ir.items_id=#{irid} ORDER BY ir.fechafinrenta DESC LIMIT 1;
+	</select>
 
         <resultMap type='Item' id='ItemResult'>
             <id property='id' column='iId'/>

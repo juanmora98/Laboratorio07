@@ -21,9 +21,9 @@ public interface ItemMapper {
     
     public void insertarItem(@Param("item") Item it);
 
-	public void insertarItem(ItemRentado it);
+	public void insertarItemRentado(ItemRentado it);
 
-	public ItemRentado consultarItemRentado(int id);
+	public ItemRentado consultarItemRentado(@Param("irid") int id);
 
     
         

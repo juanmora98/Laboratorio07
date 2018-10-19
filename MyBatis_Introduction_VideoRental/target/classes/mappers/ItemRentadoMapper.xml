@@ -15,6 +15,7 @@
 			
 				FROM VI_ITEMRENTADO as ir;
 	</select>
+	
     <resultMap type='ItemRentado' id='ItemRentadoResult'>
 		<id property='id' column='irId'/>
 		<result property='fechainiciorenta' column='irFechaInicioRenta'/>
