@@ -136,7 +136,11 @@ public class ServiciosAlquilerImpl implements ServiciosAlquiler {
 
    @Override
    public void registrarCliente(Cliente c) throws ExcepcionServiciosAlquiler {
-       throw new UnsupportedOperationException("Not supported yet.");
+       try {
+    	   
+       }catch(PersistenceException ex) {
+    	   
+       }
    }
 
    @Override
