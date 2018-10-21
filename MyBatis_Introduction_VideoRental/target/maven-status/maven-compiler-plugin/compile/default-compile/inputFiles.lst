@@ -1,21 +1,21 @@
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/entities/ItemRentado.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/services/impl/ServiciosAlquilerItemsStub.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/services/ServiciosAlquilerFactory.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/entities/TipoItem.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/TipoItemDAO.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/mybatis/MyBATISItemRentadoDAO.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/mybatis/mappers/ItemMapper.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/ClienteDAO.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/mybatis/mappers/TipoItemMapper.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/mybatis/MyBATISClienteDAO.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/ItemDAO.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/services/ServiciosAlquiler.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/services/client/MyBatisExample.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/mybatis/mappers/ClienteMapper.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/mybatis/MyBATISTipoItemDAO.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/services/ExcepcionServiciosAlquiler.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/entities/Item.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/ItemRentadoDAO.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/mybatis/MyBATISItemDAO.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/services/impl/ServiciosAlquilerImpl.java
-/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/entities/Cliente.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\services\ServiciosAlquilerFactory.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\entities\Item.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\services\impl\ServiciosAlquilerImpl.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\services\ExcepcionServiciosAlquiler.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\ItemDAO.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\mappers\TipoItemMapper.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\MyBATISItemRentadoDAO.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\TipoItemDAO.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\MyBATISClienteDAO.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\MyBATISItemDAO.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\entities\Cliente.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\entities\ItemRentado.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\services\ServiciosAlquiler.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\services\impl\ServiciosAlquilerItemsStub.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\ItemRentadoDAO.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\mappers\ItemMapper.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\services\client\MyBatisExample.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\mappers\ClienteMapper.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\entities\TipoItem.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\MyBATISTipoItemDAO.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\ClienteDAO.java

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html  xmlns="http://www.w3c.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:form id="guess_form">
+            <p:outputLabel style = "display:none;" value="#{guessBean.numAleatorio}"/>
+            <p:inputText value ="#{guessBean.num}" required ="true"> Dame un numero entre el 1 y 100: </p:inputText>
+            <p:commandButton value="Intentar" update="guess_form" actionListener="#{guessBean.guess()}"> </p:commandButton>
+            <br></br>
+            <label> As fallado esta cantidad de veces: </label>
+            <table style="width:100%">
+                <tr>
+                  <th>1</th>
+                  <th>2</th> 
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th> 
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th> 
+                  <th>9</th>
+                  <th>10</th>
+                </tr>
+                <tr>
+                    <th>#{guessBean.getIntentosT(0)}</th>
+                    <th>#{guessBean.getIntentosT(1)}</th>
+                    <th>#{guessBean.getIntentosT(2)}</th>
+                    <th>#{guessBean.getIntentosT(3)}</th>
+                    <th>#{guessBean.getIntentosT(4)}</th>
+                    <th>#{guessBean.getIntentosT(5)}</th>
+                    <th>#{guessBean.getIntentosT(6)}</th>
+                    <th>#{guessBean.getIntentosT(7)}</th>
+                    <th>#{guessBean.getIntentosT(8)}</th>
+                    <th>#{guessBean.getIntentosT(9)}</th>
+                </tr>
+              </table> 
+            
+            <p:outputLabel value="#{guessBean.intentos}"></p:outputLabel>
+            <br></br>
+            
+            
+            
+            <p:outputLabel value="#{guessBean.estado}"/>
+            <br></br>
+            <label> EL premio va en: </label>
+            <p:outputLabel value="#{guessBean.premio}"> </p:outputLabel>
+            <p:commandButton value="Reiniciar" update="guess_form" actionListener="#{guessBean.restart()}"> </p:commandButton>
+            
+        </h:form>
+    </h:body>
+</html>
+
