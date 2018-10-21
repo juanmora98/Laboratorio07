@@ -6,6 +6,7 @@ C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_Vi
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\mappers\TipoItemMapper.java
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\MyBATISItemRentadoDAO.java
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\TipoItemDAO.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\view\BasePageBean.java
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\MyBATISClienteDAO.java
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\MyBATISItemDAO.java
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\entities\Cliente.java
@@ -13,6 +14,7 @@ C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_Vi
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\services\ServiciosAlquiler.java
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\services\impl\ServiciosAlquilerItemsStub.java
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\ItemRentadoDAO.java
+C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\guice\GuiceContextListener.java
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\mappers\ItemMapper.java
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\samples\services\client\MyBatisExample.java
 C:\Users\jfmor\Desktop\PDSW\lab 07 masters\Laboratorio07\MyBatis_Introduction_VideoRental\src\main\java\edu\eci\pdsw\sampleprj\dao\mybatis\mappers\ClienteMapper.java
