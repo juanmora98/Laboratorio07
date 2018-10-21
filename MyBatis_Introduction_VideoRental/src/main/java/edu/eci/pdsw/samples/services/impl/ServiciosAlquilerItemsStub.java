@@ -35,7 +35,7 @@ public class ServiciosAlquilerItemsStub implements ServiciosAlquiler {
        itemsrentados = new HashMap<>();
        tipositems = new HashMap<>();
        mapaPrestamosPorIdCliente=new HashMap<>();
-       //poblar();
+       poblar();
    }
 
    @Override
@@ -213,9 +213,9 @@ public class ServiciosAlquilerItemsStub implements ServiciosAlquiler {
        Item i4=new Item(ti1, 4, "Los 4 Fantasticos", "Los 4 Fantásticos  es una película de superhéroes  basada en la serie de cómic homónima de Marvel.", java.sql.Date.valueOf("2005-06-08"), 2000, "DVD", "Ciencia Ficcion");
        Item i5=new Item(ti2, 5, "Halo 3", "Halo 3 es un videojuego de disparos en primera persona desarrollado por Bungie Studios.", java.sql.Date.valueOf("2007-09-08"), 3000, "DVD", "Shooter");
        Item i6=new Item(ti3, 6, "Thriller", "Thriller es una canción interpretada por el cantante estadounidense Michael Jackson, compuesta por Rod Temperton y producida por Quincy Jones.", java.sql.Date.valueOf("1984-01-11"), 2000, "DVD", "Pop");
-       //items.put(1, i1);
-       //items.put(2, i2);
-       //items.put(3, i3);
+       itemsDisponibles.put(1, i1);
+       itemsDisponibles.put(2, i2);
+       itemsDisponibles.put(3, i3);
        itemsDisponibles.put(4, i4);
        itemsDisponibles.put(5, i5);
        itemsDisponibles.put(6, i6);

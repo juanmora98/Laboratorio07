@@ -16,7 +16,7 @@
 <welcome-file-list>
    <welcome-file>faces/index.jsp</welcome-file>
 </welcome-file-list>
-</web-app>
 <listener>
     <listener-class>edu.eci.pdsw.guice.GuiceContextListener</listener-class>
 </listener>
+</web-app>
