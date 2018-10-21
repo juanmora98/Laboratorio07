@@ -37,6 +37,7 @@ import edu.eci.pdsw.samples.services.ServiciosAlquilerFactory;
 import edu.eci.pdsw.samples.services.impl.ServiciosAlquilerImpl;
 
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -78,7 +79,7 @@ public class MyBatisExample {
 
         
         //Crear el mapper y usarlo: 
-        ClienteMapper cm=sqlss.getMapper(ClienteMapper.class);
+        //ClienteMapper cm=sqlss.getMapper(ClienteMapper.class);
         //cm...
         /*ClienteMapper cm=sqlss.getMapper(ClienteMapper.class);
         for (Cliente c: cm.consultarClientes()){
@@ -102,7 +103,10 @@ public class MyBatisExample {
         ServiciosAlquiler sa = ServiciosAlquilerFactory.getInstance().getServiciosAlquiler(); 
         /*A continuzao pruebas para el services impl*/
         //System.out.println(sa.valorMultaRetrasoxDia(5));
-        //System.out.println(sa.consultarCliente(12345).toString());
+        System.out.println("El cliente a consultar es aquel que tiene como documento 12345");
+        Cliente cliente = sa.consultarCliente(12345);
+        System.out.println("Cliente consultado:");
+        System.out.println(cliente.toString());
         /*List<ItemRentado> itemsRentados = sa.consultarItemsCliente(12345);
         for(ItemRentado it : itemsRentados) {
         	System.out.println(it.toString());
@@ -128,7 +132,21 @@ public class MyBatisExample {
         for(ItemRentado ir: itemsRentadosPorElJavi) {
         	System.out.println(ir.toString());
         }*/
+        /*sa.registrarCliente(new Cliente("Ana deja de mencionar Redes pls", 1234567894, "1234567894", "   ", "anadejademencionarredespls@e.e",true, new ArrayList<ItemRentado>()));
+        Cliente ana = sa.consultarCliente(1234567894);
+        System.out.println(ana.toString());*/
+        /*sa.actualizarTarifaItem(777, 2000);
+        Item item = sa.consultarItem(777);
+        System.out.println(item.toString());*/
+        /*Item i = new Item(new TipoItem(1, "Video"), 1234567894, "Fiesta", "Video realizado por Mister Jagger", Date.valueOf("2016-10-21"), 5000, "DVD", "+18");
+        sa.registrarItem(i);
+        Item it = sa.consultarItem(1234567894);
+        System.out.println(it.toString());*/
+        /*sa.vetarCliente(1234567894, true);
+        Cliente a = sa.consultarCliente(1234567894);
+        System.out.println(a.toString());*/
         sqlss.close();
+        
 
         
         

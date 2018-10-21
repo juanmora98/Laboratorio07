@@ -72,5 +72,14 @@ public class MyBATISClienteDAO implements ClienteDAO{
 	  }	
 	  
   }
+  
+  @Override
+  public void vetar(long docu, boolean estado) throws PersistenceException{
+	  try {
+		  clienteMapper.vetar(docu,estado);
+	  }catch(PersistenceException ex) {
+		  throw new PersistenceException("Error al vetar al cliente",ex);
+	  }
+  }
 }
 

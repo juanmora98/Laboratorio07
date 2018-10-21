@@ -1,4 +1,6 @@
 /home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/entities/ItemRentado.java
+/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/services/impl/ServiciosAlquilerItemsStub.java
+/home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/services/ServiciosAlquilerFactory.java
 /home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/samples/entities/TipoItem.java
 /home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/TipoItemDAO.java
 /home/jeymar/Downloads/Laboratorio07/MyBatis_Introduction_VideoRental/src/main/java/edu/eci/pdsw/sampleprj/dao/mybatis/MyBATISItemRentadoDAO.java

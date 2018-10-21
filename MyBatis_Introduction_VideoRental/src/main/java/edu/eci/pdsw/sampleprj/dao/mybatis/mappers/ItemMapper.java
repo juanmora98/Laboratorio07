@@ -25,6 +25,8 @@ public interface ItemMapper {
 
 	public ItemRentado consultarItemRentado(@Param("irid") int id);
 
+	public void actualizarTarifaItem(@Param("id") int id, @Param("tarifa") long tarifa);
+
     
         
 }

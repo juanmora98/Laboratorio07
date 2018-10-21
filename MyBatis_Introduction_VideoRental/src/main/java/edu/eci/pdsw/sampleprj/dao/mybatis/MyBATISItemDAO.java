@@ -45,5 +45,13 @@ public class MyBATISItemDAO implements ItemDAO{
 	      throw new PersistenceException("Error al consultar los items");
 	  }
   }
+  
+  public void actualizarTarifaItem(int item, long tarifa) throws PersistenceException{
+	  try {
+		  itemMapper.actualizarTarifaItem(item, tarifa);
+	  }catch(PersistenceException ex) {
+		  throw new PersistenceException("Error al actualizar la tarifa del item");
+	  }
+  }
 
   }

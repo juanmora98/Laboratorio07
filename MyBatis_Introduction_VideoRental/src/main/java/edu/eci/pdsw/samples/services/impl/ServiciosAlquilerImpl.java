@@ -137,28 +137,46 @@ public class ServiciosAlquilerImpl implements ServiciosAlquiler {
    @Override
    public void registrarCliente(Cliente c) throws ExcepcionServiciosAlquiler {
        try {
-    	   
+    	   clienteDAO.save(c);
        }catch(PersistenceException ex) {
-    	   
+    	   throw new ExcepcionServiciosAlquiler("Error al insertar el cliente"+c.getDocumento(),ex);
        }
    }
 
    @Override
    public long consultarCostoAlquiler(int iditem, int numdias) throws ExcepcionServiciosAlquiler {
-       throw new UnsupportedOperationException("Not supported yet.");
+       try{
+    	   Item item = itemDAO.load(iditem);
+    	   long valorxdia = item.getTarifaxDia();
+    	   return valorxdia*numdias;
+       }catch( PersistenceException ex) {
+    	   throw new ExcepcionServiciosAlquiler("Error al calcular el valor de la renta",ex);
+       }
    }
 
    @Override
    public void actualizarTarifaItem(int id, long tarifa) throws ExcepcionServiciosAlquiler {
-       throw new UnsupportedOperationException("Not supported yet.");
+       try {
+    	   itemDAO.actualizarTarifaItem(id, tarifa);
+       }catch(PersistenceException ex) {
+    	   throw new ExcepcionServiciosAlquiler("Error al actualizar la tarifa del item "+id,ex);
+       }
    }
    @Override
    public void registrarItem(Item i) throws ExcepcionServiciosAlquiler {
-       throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       try {
+    	   itemDAO.save(i);
+       }catch(PersistenceException ex) {
+    	   throw new ExcepcionServiciosAlquiler("Error al registrar el item",ex);
+       }
    }
 
    @Override
    public void vetarCliente(long docu, boolean estado) throws ExcepcionServiciosAlquiler {
-       throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       try {
+    	   clienteDAO.vetar(docu, estado);
+       }catch(PersistenceException ex) {
+    	   throw new ExcepcionServiciosAlquiler("Error al vetar al cliente "+docu,ex);
+       }
    }
 }

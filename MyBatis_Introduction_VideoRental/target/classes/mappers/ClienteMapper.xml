@@ -70,7 +70,15 @@
             values (#{idc},#{idi},#{feci},#{fecf}) ;
         </insert>
         
-        
+    <insert id="insertarCliente" parameterType="map">
+    	INSERT INTO VI_CLIENTES (documento, nombre, telefono, direccion, email, vetado) 
+    	VALUES (#{cliente.documento}, #{cliente.nombre}, #{cliente.telefono}, #{cliente.direccion}, #{cliente.email}, 0); 
+    </insert>
+    
+    <update id="vetar" parameterType="map">
+    	UPDATE VI_CLIENTES SET vetado=1 WHERE documento=#{docu};
+    </update>
+    
 	<resultMap type='Cliente' id='ClienteResult'>
 		<id property='documento' column='cDocumento'/>
 		<result property='nombre' column='cNombre'/>
