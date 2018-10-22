@@ -175,6 +175,7 @@ public class ServiciosAlquilerItemsStub implements ServiciosAlquiler {
 
    @Override
    public long consultarMultaAlquiler(int iditem,Date fechaDevolucion) throws ExcepcionServiciosAlquiler{
+	   
        if (!itemsrentados.containsKey(iditem)){
            throw new ExcepcionServiciosAlquiler("El item "+iditem+"no esta en alquiler");
        }
@@ -223,7 +224,12 @@ public class ServiciosAlquilerItemsStub implements ServiciosAlquiler {
        ItemRentado ir1=new ItemRentado(0,i1, java.sql.Date.valueOf("2017-01-01"), java.sql.Date.valueOf("2017-03-12"));
        ItemRentado ir2=new ItemRentado(0,i2, java.sql.Date.valueOf("2017-01-04"), java.sql.Date.valueOf("2017-04-7"));
        ItemRentado ir3=new ItemRentado(0,i1, java.sql.Date.valueOf("2017-01-07"), java.sql.Date.valueOf("2017-07-12"));
-
+       
+       itemsrentados.put(ir1.getItem().getId(), ir1);
+       itemsrentados.put(ir2.getItem().getId(), ir2);
+       itemsrentados.put(ir3.getItem().getId(), ir3);
+       
+       
        ArrayList<ItemRentado> list1 = new ArrayList<>();
        list1.add(ir1);
        ArrayList<ItemRentado> list2 = new ArrayList<>();
